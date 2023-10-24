@@ -1,10 +1,7 @@
-{% extends "base.html" %}
 
-{% block content %}
     <h1>Lista de Productos</h1>
     <ul>
         {% for producto in productos %}
             <li>{{ producto.nombre }}: {{ producto.precio }}</li>
         {% endfor %}
     </ul>
-{% endblock %}

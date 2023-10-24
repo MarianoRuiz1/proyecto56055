@@ -9,6 +9,7 @@ def mostrar_fecha_actual(request):
 
 def producto_list(request):
     productos = Producto.objects.all()
+    print(productos)
     return render(request, 'producto_list.html', {'productos': productos})
 
 def index(request):
