@@ -1,7 +1,14 @@
+{% extends "index.html" %}
+
+{% block content %}
 
     <h1>Lista de Productos</h1>
     <ul>
         {% for producto in productos %}
-            <li>{{ producto.nombre }}: {{ producto.precio }}</li>
+            <li>{{ producto.nombre }}: {{ producto.precio }}</a></li>
         {% endfor %}
     </ul>
+    <a href="{% url 'CoderApp:agregar_producto' %}">Agregar Producto</a>
+
+
+{% endblock %}
