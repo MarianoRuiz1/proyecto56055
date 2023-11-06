@@ -1,14 +1,14 @@
 {% extends "index.html" %}
 
 {% block content %}
-
     <h1>Lista de Productos</h1>
     <ul>
         {% for producto in productos %}
-            <li>{{ producto.nombre }}: {{ producto.precio }}</a></li>
+            <li>{{ producto.nombre }}: {{ producto.precio }} 
+                <a href="{% url 'CoderApp:editar_producto' producto.id %}">Editar</a>
+                <a href="{% url 'CoderApp:eliminar_producto' producto.id %}">Eliminar</a>
+            </li>
         {% endfor %}
     </ul>
     <a href="{% url 'CoderApp:agregar_producto' %}">Agregar Producto</a>
-
-
 {% endblock %}
